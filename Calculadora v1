@@ -1,0 +1,73 @@
+def somar(num1, num2):
+    return num1 + num2
+
+
+def subtrair(num1, num2):
+    return num1 - num2
+
+
+def divisao(num1, num2):
+    return num1 / num2
+
+
+def multiplicacao(num1, num2):
+    return num1 * num2
+
+
+def divisao_exata(num1, num2):
+    return num1 // num2
+
+
+while True:
+    def menu():
+        print("Olá, o que você gostaria de calcular?")
+        print("1 - somar")
+        print("2 - subtrair")
+        print("3 - divisao")
+        print("4 - multiplicacao")
+        print("5 - divisao exata")
+
+    menu()
+
+    opcao = int(input("Digite a opção: "))
+    while True:
+        if opcao == 1:
+            nume1 = int(input("Digite o primeiro numero: "))
+            nume2 = int(input("Digite o segundo numero: "))
+            print("O resultado é: " + str(somar(nume1, nume2)))
+            break
+
+        elif (opcao == 2):
+            nume1 = int(input("Digite o primeiro número: "))
+            nume2 = int(input("Digite o segundo número: "))
+            print("O resultado é: " + str(subtrair(nume1, nume2)))
+            break
+
+        elif (opcao == 3):
+            nume1 = int(input("Digite o primeiro número: "))
+            nume2 = int(input("Digite o segundo número: "))
+            try:
+                resultado = divisao(nume1, nume2)
+                resultado_arre = round(resultado, 3)
+                print("O resultado é: " + str(resultado_arre))
+                break
+            except ZeroDivisionError:
+                print("Erro: divisão por zero!")
+                break
+
+        elif (opcao == 4):
+            nume1 = int(input("Digite o primeiro número: "))
+            nume2 = int(input("Digite o segundo número: "))
+            print("O resultado é: " + str(multiplicacao(nume1, nume2)))
+            break
+
+        elif (opcao == 5):
+            nume1 = int(input("Digite o primeiro número: "))
+            nume2 = int(input("Digite o segundo número: "))
+            resultado = divisao_exata(nume1, nume2)
+            print("O resultado é: " + str(resultado))
+            break
+
+        else:
+            print("Erro, digite uma opção válida!")
+            break
