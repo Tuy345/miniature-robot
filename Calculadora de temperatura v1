@@ -1,0 +1,71 @@
+def celsius_p_fahrenheit(num1):
+    return num1 * 1.8 + 32
+
+
+def fahrenheit_p_celsius(num1):
+    return (num1 - 32) / 1.8
+
+
+def celsius_p_kelvin(num1):
+    return num1 + 273
+
+
+def kelvin_p_celsius(num1):
+    return num1 - 273
+
+
+def fahrenheit_p_kelvin(num1):
+    return (num1 - 32) * 1.8 + 273
+
+
+def kelvin_p_fahrenheit(num1):
+    return (num1 - 273) * 1.8 + 32
+
+
+while True:
+    def menu():
+        print("Olá, o que você gostaria de calcular?")
+        print("1. Celsius para Fahrenheit")
+        print("2. Fahrenheit para Celsius")
+        print("3. Celsius para Kelvin")
+        print("4. Kelvin para Celsius")
+        print("5. Fahrenheit para Kelvin")
+        print("6. Kelvin para Fahrenheit")
+
+    menu()
+
+    opcao = int(input("Digite aqui a opção desejada: "))
+
+    if (opcao == 1):
+        celsius = float(input("Digite o valor de Celsius: "))
+        fahrenheit = celsius_p_fahrenheit(celsius)
+        print("O valor de Fahrenheit é:", fahrenheit)
+
+    elif (opcao == 2):
+        fahrenheit = float(input("Digite o valor de Fahrenheit: "))
+        celsius = fahrenheit_p_celsius(fahrenheit)
+        print("O valor de Celsius é:", celsius)
+
+    elif (opcao == 3):
+        celsius = float(input("Digite o valor de Celsius: "))
+        kelvin = celsius_p_kelvin(celsius)
+        print("O valor de Kelvin é:", kelvin)
+
+    elif (opcao == 4):
+        kelvin = float(input("Digite o valor de Kelvin: "))
+        celsius = kelvin_p_celsius(kelvin)
+        print("O valor Celsius é:", celsius)
+
+    elif (opcao == 5):
+        celsius = float(input("Digite o valor de Celsius: "))
+        kelvin = celsius_p_kelvin(celsius)
+        print("O valor de Kelvin é:", kelvin)
+
+    elif (opcao == 6):
+        kelvin = float(input("Digite o valor de Kelvin: "))
+        fahrenheit = kelvin_p_fahrenheit(kelvin)
+        print("O valor de Fahrenheit é:", fahrenheit)
+
+
+    else:
+        print("Opção inválida, digite um dos números que aparece acima!")
